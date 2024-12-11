@@ -1,0 +1,64 @@
+{"level":"info","time":"2024-12-10T21:29:08.489+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T21:29:08.489+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T21:29:21.952+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T21:29:21.952+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T22:45:13.481+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T22:45:13.485+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T22:53:51.223+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T22:53:51.224+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T22:58:06.250+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T22:58:06.251+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"error","time":"2024-12-10T22:58:09.320+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:51","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T22:58:26.590+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T22:58:26.591+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"error","time":"2024-12-10T22:58:41.027+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:51","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}
+{"level":"error","time":"2024-12-10T22:58:44.894+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:51","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}
+{"level":"error","time":"2024-12-10T22:58:54.472+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:51","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:00:25.989+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:00:25.990+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"error","time":"2024-12-10T23:00:34.754+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:57","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}
+{"level":"error","time":"2024-12-10T23:00:56.720+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:51","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:03:01.585+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:03:01.586+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:03:53.924+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:03:53.925+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:04:13.444+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:04:13.445+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:05:00.005+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:05:00.006+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:05:35.535+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:05:35.536+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:07:14.835+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:07:14.837+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:08:41.347+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:08:41.348+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:10:22.112+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:10:22.117+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:10:29.778+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:10:29.779+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"error","time":"2024-12-10T23:11:14.707+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:51","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:12:29.483+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:12:29.485+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:13:02.721+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:13:02.722+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:30:38.322+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:30:38.324+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:32:05.924+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:32:05.925+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:32:37.621+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:32:37.623+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:32:57.366+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-10T23:32:57.368+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T00:23:29.099+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T00:23:29.101+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"error","time":"2024-12-11T00:23:32.914+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:60","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}
+{"level":"error","time":"2024-12-11T00:23:34.429+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:60","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T08:26:22.818+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T08:26:22.822+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T09:30:57.345+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T09:30:57.347+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T09:31:15.846+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T09:31:15.848+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T09:32:04.612+0400","line":"/Users/best01/Desktop/StatusNEO/service/logger_service.go:28","msg":"Logger initialized","service":"maker-checker"}
+{"level":"info","time":"2024-12-11T09:32:04.614+0400","line":"/Users/best01/Desktop/StatusNEO/rest/bootstrap.go:20","msg":"rest server ok","service":"maker-checker"}
+{"level":"error","time":"2024-12-11T09:32:53.435+0400","line":"/Users/best01/Desktop/StatusNEO/service/user_service.go:60","msg":"[UpdateMessage] User role is not correct","service":"maker-checker"}

@@ -1,0 +1,30 @@
+{
+	"dataSource": {
+		"host": "localhost",
+		"port": "5432",
+		"database": "statusneo",
+		"user": "test",
+		"password": "test",
+		"enableAutoMigrate": true,
+		"sslMode": "",
+		"retries": 3,
+		"mode": 0
+	},
+	"env": "development",
+	"logger":{
+		"path":"log/log.log",
+		"level":"info",
+		"name":"maker-checker",
+		"mode":""
+	},
+	"rest": {
+		"addr": ":8002"
+	},
+	"emailConfig": {
+		"host": "smtp.example.com",
+		"port": "587",
+		"from": "bilal@example.com",
+		"password": "****",
+		"isEnabled": false
+	}
+}
