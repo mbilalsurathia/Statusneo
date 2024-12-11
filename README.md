@@ -14,10 +14,10 @@ If rejected, the message is discarded.
 ----------------------------------------------------------------------------------------------------------------
 
 Technology Stack
-Gin Framework (Web framework for Go)
-PostgreSQL (Database)
-Golang (Programming language)
-Docker Compose (For PostgreSql )
+1. Gin Framework (Web framework for Go)
+2. PostgreSQL (Database)
+3. Golang (Programming language)
+4. Docker Compose (For PostgreSql )
 
 ----------------------------------------------------------------------------------------------------------------
 Prerequisites
@@ -129,16 +129,12 @@ GET /api/v1/users/message-request
 Description: Retrieves the current status of the message request.
 Response:
 { 
-  [
-    {
       "request_id": 1,
       "status": "Pending",
       "sender": "user1",
       "recipient": "user2",
       "message": "Hello World",
       "created_at": "2024-12-10T12:34:56Z"
-    }
-  ]
 }
 ----------------------------------------------------------------------------------------------------------------
 
