@@ -1,12 +1,11 @@
 package rest
 
 import (
+	"github.com/gin-gonic/gin"
 	"maker-checker/models"
 	"maker-checker/service"
+	"maker-checker/utils"
 	"net/http"
-	"strconv"
-
-	"github.com/gin-gonic/gin"
 )
 
 type UserController interface {
@@ -29,29 +28,23 @@ func (u *userController) CreateMessage(ctx *gin.Context) {
 
 	err := ctx.BindJSON(&request)
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, models.INVALID_INPUT, models.INVALID_INPUT_MESSAGE, nil))
+		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INVALID_INPUT, models.INVALID_INPUT_MESSAGE, nil))
 		return
 	}
 
 	err = request.Validate()
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, models.INVALID_INPUT, err.Error(), nil))
+		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INVALID_INPUT, err.Error(), nil))
 		return
 	}
 
 	//service method call to create Message
 	message, err := u.userService.CreateMessage(request)
 	if err != nil {
-		if standardError, ok := err.(*models.StandardError); ok {
-			ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, standardError.Code, standardError.Message, nil))
-			return
-		} else {
-			ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, models.INTERNAL_SERVER_ERROR, err.Error(), nil))
-			return
-		}
+		utils.HandleServiceError(ctx, err)
 	}
 
-	ctx.JSON(http.StatusOK, NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, message))
+	ctx.JSON(http.StatusOK, models.NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, message))
 }
 
 // UpdateMessage Update Message API
@@ -60,55 +53,39 @@ func (u *userController) UpdateMessage(ctx *gin.Context) {
 
 	err := ctx.BindJSON(&request)
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, models.INVALID_INPUT, models.INVALID_INPUT_MESSAGE, nil))
+		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INVALID_INPUT, models.INVALID_INPUT_MESSAGE, nil))
 		return
 	}
 
 	err = request.Validate()
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, models.INVALID_INPUT, err.Error(), nil))
+		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INVALID_INPUT, err.Error(), nil))
 		return
 	}
 
 	//service method call to Update Message for Approve or Reject
 	messages, err := u.userService.UpdateMessage(request)
 	if err != nil {
-		if standardError, ok := err.(*models.StandardError); ok {
-			ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, standardError.Code, standardError.Message, nil))
-			return
-		} else {
-			ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, models.INTERNAL_SERVER_ERROR, err.Error(), nil))
-			return
-		}
+		utils.HandleServiceError(ctx, err)
+		return
 	}
 
-	ctx.JSON(http.StatusOK, NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, messages))
+	ctx.JSON(http.StatusOK, models.NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, messages))
 }
 
 // GetMessages Get Message API
 func (u *userController) GetMessages(ctx *gin.Context) {
-	messageId := uint64(0)
-	requestId := ctx.Query("messageId")
-	if requestId != "" {
-		messageIdInt, err := strconv.Atoi(requestId)
-		if err != nil {
-			ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, models.BAD_REQUEST, err.Error(), nil))
-			return
-		}
-		messageId = uint64(messageIdInt)
+	messageId, err := utils.ParseMessageID(ctx)
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.BAD_REQUEST, err.Error(), nil))
+		return
 	}
 
 	//service method call to Get Messages by MessageId or All messages
 	messages, err := u.userService.GetMessages(messageId)
 	if err != nil {
-		if standardError, ok := err.(*models.StandardError); ok {
-			ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, standardError.Code, standardError.Message, nil))
-			return
-		} else {
-			ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, models.INTERNAL_SERVER_ERROR, err.Error(), nil))
-			return
-		}
+		utils.HandleServiceError(ctx, err)
 	}
 
-	ctx.JSON(http.StatusOK, NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, messages))
+	ctx.JSON(http.StatusOK, models.NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, messages))
 }
