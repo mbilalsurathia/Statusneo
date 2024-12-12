@@ -14,10 +14,10 @@ If rejected, the message is discarded.
 ----------------------------------------------------------------------------------------------------------------
 
 Technology Stack
-1. Gin Framework (Web framework for Go)
-2. PostgreSQL (Database)
-3. Golang (Programming language)
-4. Docker Compose (For PostgreSql )
+Gin Framework (Web framework for Go)
+PostgreSQL (Database)
+Golang (Programming language)
+Docker Compose (For PostgreSql )
 
 ----------------------------------------------------------------------------------------------------------------
 Prerequisites
@@ -48,25 +48,25 @@ we can also change the port in conf.json file if we need to run on different por
 ----------------------------------------------------------------------------------------------------------------
 Project Structure
 .
-├── conf/                      # Configuration files
-│   └── gbe_config.go          # DB and Email configurations
-├── rest/                      # Controller layer for API routes
-│   └── user_controller.go     # main controller where all Endpoints are written
-│   └── bootstrap.go           # we use bootstrap pattern
-│   └── vo.go                  # standard response return
-│   └── server.go              # server and routes define
-├── repository/                # Database interaction layer
-│   └── store.go               # db functions method declares
-│   └── postgres               # main functions method defines and implements
-│   └──└── db.go               # migrations and database setup
-│   └──└── users.go            # main functions method defines and implements
-├── services/                  # Business logic layer
-│   └── user_service.go        #main business logic functions
-├── main.go                    # Entry point for the application
-├── Dockerfile                 # Dockerfile to build the image
-├── docker-compose.yml         # Docker Compose file for DB
-├── go.mod                     # Go module dependencies
-└── README.md                  # Project documentation
+1. ├── conf/                      # Configuration files
+2. │   └── gbe_config.go          # DB and Email configurations
+3. ├── rest/                      # Controller layer for API routes
+4. │   └── user_controller.go     # main controller where all Endpoints are written
+5. │   └── bootstrap.go           # we use bootstrap pattern
+6. │   └── vo.go                  # standard response return
+7. │   └── server.go              # server and routes define
+8. ├── repository/                # Database interaction layer
+9. │   └── store.go               # db functions method declares
+10. │   └── postgres               # main functions method defines and implements
+11. │   └──└── db.go               # migrations and database setup
+12. │   └──└── users.go            # main functions method defines and implements
+13. ├── services/                  # Business logic layer
+14. │   └── user_service.go        #main business logic functions
+15. ├── main.go                    # Entry point for the application
+16. ├── Dockerfile                 # Dockerfile to build the image
+17. ├── docker-compose.yml         # Docker Compose file for DB
+18. ├── go.mod                     # Go module dependencies
+19. └── README.md                  # Project documentation
 
 ----------------------------------------------------------------------------------------------------------------
 Explanation of Project Structure:
@@ -81,60 +81,65 @@ API Endpoints
 The API exposes the following endpoints:
 We can also check the postman collection in the directory with the name of Maker-Checker.postman_collection.json
 
-POST /api/v1/users/message-request
+POST /api/v1/message-request
 
 Description: Initiates a new message request.
 Request Body:
 
-{
-  "user_id": "user1",
-  "recipient": "user2",
-  "message": "Hello World"
-}
+    {
+      "user_id": "user1",
+      "recipient": "user2",
+      "message": "Hello World"
+    }
 
 Response:
-{
-  "message_id": 7,
-  "sender": "Frank",
-  "recipient": "mbilalsorathia@gmail.com",
-  "message": "hey its frank here",
-  "status": "Pending",
-  "created_at": "2024-12-10T23:33:00.918952+04:00",
-  "updated_at": "2024-12-10T23:33:00.919367+04:00"
-}
 
-PATCH /api/v1/users/message-request
+    {
+      "message_id": 7,
+      "sender": "Frank",
+      "recipient": "mbilalsorathia@gmail.com",
+      "message": "hey its frank here",
+      "status": "Pending",
+      "created_at": "2024-12-10T23:33:00.918952+04:00",
+      "updated_at": "2024-12-10T23:33:00.919367+04:00"
+    }
+
+PATCH /api/v1/message-request
 
 Description: Approves a message request (can only be done by Checkers).
 Request Body:
-{
-  "request_id":7,
-  "user_id":"user2",
-  "status":"Approve"
-}
+
+    {
+      "request_id":7,
+      "user_id":"user2",
+      "status":"Approve"
+    }
 
 Response:
 
-{
-  "message_id": 7,
-  "sender": "Frank",
-  "recipient": "mbilalsorathia@gmail.com",
-  "message": "hey its frank here",
-  "status": "Approve", // or Reject
-  "created_at": "2024-12-10T23:33:00.918952+04:00",
-  "updated_at": "2024-12-10T23:33:00.919367+04:00"
-}
+    {
+    "message_id": 7,
+    "sender": "Frank",
+    "recipient": "mbilalsorathia@gmail.com",
+    "message": "hey its frank here",
+    "status": "Approve", // or Reject
+    "created_at": "2024-12-10T23:33:00.918952+04:00",
+    "updated_at": "2024-12-10T23:33:00.919367+04:00"
+    }
+
 GET /api/v1/users/message-request
 
 Description: Retrieves the current status of the message request.
 Response:
-{ 
+
+    {
       "request_id": 1,
       "status": "Pending",
       "sender": "user1",
       "recipient": "user2",
       "message": "Hello World",
       "created_at": "2024-12-10T12:34:56Z"
-}
+    }
+
 ----------------------------------------------------------------------------------------------------------------
 
