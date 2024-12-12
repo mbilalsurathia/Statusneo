@@ -51,8 +51,21 @@ func LogError(message string, err error) {
 
 func HandleServiceError(ctx *gin.Context, err error) {
 	if standardError, ok := err.(*models.StandardError); ok {
-		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, standardError.Code, standardError.Message, nil))
+		ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, standardError.Code, standardError.Message, nil))
 	} else {
-		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INTERNAL_SERVER_ERROR, err.Error(), nil))
+		ctx.JSON(http.StatusBadRequest, NewStandardResponse(false, models.INTERNAL_SERVER_ERROR, err.Error(), nil))
+	}
+}
+
+func NewStandardResponse(result bool, code uint, msg string, data interface{}) *models.StandardResponse {
+
+	if data == nil {
+		data = ""
+	}
+	return &models.StandardResponse{
+		Result:  result,
+		Code:    code,
+		Message: msg,
+		Data:    data,
 	}
 }
