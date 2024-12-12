@@ -28,13 +28,13 @@ func (u *userController) CreateMessage(ctx *gin.Context) {
 
 	err := ctx.BindJSON(&request)
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INVALID_INPUT, models.INVALID_INPUT_MESSAGE, nil))
+		ctx.JSON(http.StatusBadRequest, utils.NewStandardResponse(false, models.INVALID_INPUT, models.INVALID_INPUT_MESSAGE, nil))
 		return
 	}
 
 	err = request.Validate()
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INVALID_INPUT, err.Error(), nil))
+		ctx.JSON(http.StatusBadRequest, utils.NewStandardResponse(false, models.INVALID_INPUT, err.Error(), nil))
 		return
 	}
 
@@ -44,7 +44,7 @@ func (u *userController) CreateMessage(ctx *gin.Context) {
 		utils.HandleServiceError(ctx, err)
 	}
 
-	ctx.JSON(http.StatusOK, models.NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, message))
+	ctx.JSON(http.StatusOK, utils.NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, message))
 }
 
 // UpdateMessage Update Message API
@@ -53,13 +53,13 @@ func (u *userController) UpdateMessage(ctx *gin.Context) {
 
 	err := ctx.BindJSON(&request)
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INVALID_INPUT, models.INVALID_INPUT_MESSAGE, nil))
+		ctx.JSON(http.StatusBadRequest, utils.NewStandardResponse(false, models.INVALID_INPUT, models.INVALID_INPUT_MESSAGE, nil))
 		return
 	}
 
 	err = request.Validate()
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INVALID_INPUT, err.Error(), nil))
+		ctx.JSON(http.StatusBadRequest, utils.NewStandardResponse(false, models.INVALID_INPUT, err.Error(), nil))
 		return
 	}
 
@@ -70,14 +70,14 @@ func (u *userController) UpdateMessage(ctx *gin.Context) {
 		return
 	}
 
-	ctx.JSON(http.StatusOK, models.NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, messages))
+	ctx.JSON(http.StatusOK, utils.NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, messages))
 }
 
 // GetMessages Get Message API
 func (u *userController) GetMessages(ctx *gin.Context) {
 	messageId, err := utils.ParseMessageID(ctx)
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.BAD_REQUEST, err.Error(), nil))
+		ctx.JSON(http.StatusBadRequest, utils.NewStandardResponse(false, models.BAD_REQUEST, err.Error(), nil))
 		return
 	}
 
@@ -87,5 +87,5 @@ func (u *userController) GetMessages(ctx *gin.Context) {
 		utils.HandleServiceError(ctx, err)
 	}
 
-	ctx.JSON(http.StatusOK, models.NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, messages))
+	ctx.JSON(http.StatusOK, utils.NewStandardResponse(true, models.SUCCESS, models.SUCCESSFULLY, messages))
 }
