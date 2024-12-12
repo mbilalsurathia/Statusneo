@@ -27,19 +27,25 @@ Go version 1.22+.
 1. Install dependencies
 First, install the necessary Go dependencies.
    Run command:
-    go mod tidy
+   ``` 
+     go mod tidy 
+   ```
 
 2. Docker Compose Setup
 The docker-compose.yml file is provided to set up the PostgreSQL database. It will also create the necessary database and user.
   Run command:
+   ``` 
     docker compose -f docker-compose-deps.yml up -d
+   ```
   Database connection details are stored in the conf.json file that will be read at runtime by the Go application.
   After running Docker Compose,  migrations will automatically apply to create the necessary tables for your application.
   If we need to add new tables we can add in db.go
 
 3. Run the application
-   Run command:
-    go run main.go
+     Run command:
+    ```
+      go run main.go
+   ```
 
 go run main.go
 This will start the server on http://localhost:8002.
@@ -53,20 +59,18 @@ Project Structure
 3. ├── rest/                      # Controller layer for API routes
 4. │   └── user_controller.go     # main controller where all Endpoints are written
 5. │   └── bootstrap.go           # we use bootstrap pattern
-6. │   └── vo.go                  # standard response return
-7. │   └── server.go              # server and routes define
-8. ├── repository/                # Database interaction layer
-9. │   └── store.go               # db functions method declares
-10. │   └── postgres               # main functions method defines and implements
-11. │   └──└── db.go               # migrations and database setup
-12. │   └──└── users.go            # main functions method defines and implements
-13. ├── services/                  # Business logic layer
-14. │   └── user_service.go        #main business logic functions
-15. ├── main.go                    # Entry point for the application
-16. ├── Dockerfile                 # Dockerfile to build the image
-17. ├── docker-compose.yml         # Docker Compose file for DB
-18. ├── go.mod                     # Go module dependencies
-19. └── README.md                  # Project documentation
+6. ├── repository/                # Database interaction layer
+7. │   └── store.go               # db functions method declares
+8. │   └── postgres               # main functions method defines and implements
+9. │   └──└── db.go               # migrations and database setup
+10. │   └──└── users.go            # main functions method defines and implements
+11. ├── services/                  # Business logic layer
+12. │   └── user_service.go        #main business logic functions
+13. ├── main.go                    # Entry point for the application
+14. ├── Dockerfile                 # Dockerfile to build the image
+15. ├── docker-compose.yml         # Docker Compose file for DB
+16. ├── go.mod                     # Go module dependencies
+17. └── README.md                  # Project documentation
 
 ----------------------------------------------------------------------------------------------------------------
 Explanation of Project Structure:
