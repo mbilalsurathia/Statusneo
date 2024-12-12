@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8002/api/v1/users/message-request?messageId=1",
+					"raw": "http://localhost:8002/api/v1/message-request?messageId=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -21,7 +21,6 @@
 					"path": [
 						"api",
 						"v1",
-						"users",
 						"message-request"
 					],
 					"query": [
@@ -39,7 +38,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8002/api/v1/users/message-request?messageId=1",
+							"raw": "http://localhost:8002/api/v1/message-request?messageId=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -48,7 +47,6 @@
 							"path": [
 								"api",
 								"v1",
-								"users",
 								"message-request"
 							],
 							"query": [
@@ -72,7 +70,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8002/api/v1/users/message-request",
+					"raw": "http://localhost:8002/api/v1/message-request",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -81,7 +79,6 @@
 					"path": [
 						"api",
 						"v1",
-						"users",
 						"message-request"
 					]
 				}
@@ -93,7 +90,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8002/api/v1/users/message-request",
+							"raw": "http://localhost:8002/api/v1/message-request",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -102,7 +99,6 @@
 							"path": [
 								"api",
 								"v1",
-								"users",
 								"message-request"
 							]
 						}
@@ -129,7 +125,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8002/api/v1/users/message-request",
+					"raw": "http://localhost:8002/api/v1/message-request",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -138,7 +134,6 @@
 					"path": [
 						"api",
 						"v1",
-						"users",
 						"message-request"
 					]
 				}
@@ -159,7 +154,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8002/api/v1/users/message-request",
+							"raw": "http://localhost:8002/api/v1/message-request",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -168,7 +163,6 @@
 							"path": [
 								"api",
 								"v1",
-								"users",
 								"message-request"
 							]
 						}
@@ -187,7 +181,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"request_id\":7,\n    \"user_id\":\"user2\",\n    \"status\":\"Approve\"\n}",
+					"raw": "{\n    \"request_id\":2,\n    \"user_id\":\"user2\",\n    \"status\":\"Reject\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -195,7 +189,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8002/api/v1/users/message-request",
+					"raw": "http://localhost:8002/api/v1/message-request",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -204,7 +198,6 @@
 					"path": [
 						"api",
 						"v1",
-						"users",
 						"message-request"
 					]
 				}
@@ -225,7 +218,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8002/api/v1/users/message-request",
+							"raw": "http://localhost:8002/api/v1/message-request",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -234,7 +227,6 @@
 							"path": [
 								"api",
 								"v1",
-								"users",
 								"message-request"
 							]
 						}
