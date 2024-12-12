@@ -17,3 +17,11 @@ type MessageResp struct {
 	CreatedAt  time.Time `json:"created_at"`
 	UpdatedAt  time.Time `json:"updated_at,omitempty"`
 }
+
+
+type StandardResponse struct {
+	Result  bool        `json:"result"`
+	Code    uint        `json:"code"`
+	Message string      `json:"message"`
+	Data    interface{} `json:"data"`
+}
