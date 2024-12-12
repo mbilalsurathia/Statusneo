@@ -64,13 +64,14 @@ Project Structure
 8. │   └── postgres               # main functions method defines and implements
 9. │   └──└── db.go               # migrations and database setup
 10. │   └──└── users.go            # main functions method defines and implements
-11. ├── services/                  # Business logic layer
-12. │   └── user_service.go        #main business logic functions
-13. ├── main.go                    # Entry point for the application
-14. ├── Dockerfile                 # Dockerfile to build the image
-15. ├── docker-compose.yml         # Docker Compose file for DB
-16. ├── go.mod                     # Go module dependencies
-17. └── README.md                  # Project documentation
+11. │   └──└── users.go            # main functions method defines and implements
+12. ├── services/                  # Business logic layer
+13. │   └── user_service.go        #main business logic functions
+14. ├── main.go                    # Entry point for the application
+15. ├── Dockerfile                 # Dockerfile to build the image
+16. ├── docker-compose.yml         # Docker Compose file for DB
+17. ├── go.mod                     # Go module dependencies
+18. └── README.md                  # Project documentation
 
 ----------------------------------------------------------------------------------------------------------------
 Explanation of Project Structure:
