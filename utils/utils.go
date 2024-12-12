@@ -2,9 +2,14 @@ package utils
 
 import (
 	"fmt"
+	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 	"log"
 	"maker-checker/conf"
+	"maker-checker/models"
+	"net/http"
 	"net/smtp"
+	"strconv"
 )
 
 func SendEmail(emailConfig conf.Email, sendName string, recipient string) error {
@@ -24,4 +29,30 @@ func SendEmail(emailConfig conf.Email, sendName string, recipient string) error 
 	}
 
 	return err
+}
+
+func ParseMessageID(ctx *gin.Context) (uint64, error) {
+	requestId := ctx.Query("messageId")
+	if requestId == "" {
+		return 0, nil
+	}
+
+	messageIdInt, err := strconv.Atoi(requestId)
+	if err != nil {
+		return 0, err
+	}
+
+	return uint64(messageIdInt), nil
+}
+
+func LogError(message string, err error) {
+	zap.L().Error(message, zap.Error(err))
+}
+
+func HandleServiceError(ctx *gin.Context, err error) {
+	if standardError, ok := err.(*models.StandardError); ok {
+		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, standardError.Code, standardError.Message, nil))
+	} else {
+		ctx.JSON(http.StatusBadRequest, models.NewStandardResponse(false, models.INTERNAL_SERVER_ERROR, err.Error(), nil))
+	}
 }
