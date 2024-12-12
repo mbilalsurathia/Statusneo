@@ -2,7 +2,6 @@ package postgres
 
 import (
 	"maker-checker/models"
-	"time"
 )
 
 func (s *Store) CreateUser(user *models.User) (*models.User, error) {
