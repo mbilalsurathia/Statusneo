@@ -12,20 +12,29 @@ import (
 	"strconv"
 )
 
-func SendEmail(emailConfig conf.Email, sendName string, recipient string) error {
+
+func SendEmail(emailConfig conf.Email, sendName string, recipient string) (err error) {
+
 	subject := fmt.Sprintf("Subject: Test Email from %v Status Neo", sendName)
 	body := "Hello, this is a test email sent from Go!"
 
 	// Combine subject and body
 	message := []byte(subject + "\n" + body)
 
+	defer func() {
+		if r := recover(); r != nil {
+			err = fmt.Errorf("recovered from panic: %v", r)
+			LogError("Recovered from panic", err)
+		}
+	}()
+
 	// Authentication
 	auth := smtp.PlainAuth("", emailConfig.From, emailConfig.Password, emailConfig.SmtpHost)
 
 	// Sending the email
-	err := smtp.SendMail(emailConfig.SmtpHost+":"+emailConfig.SmtpPort, auth, emailConfig.From, []string{recipient}, message)
+	err = smtp.SendMail(emailConfig.SmtpHost+":"+emailConfig.SmtpPort, auth, emailConfig.From, []string{recipient}, message)
 	if err != nil {
-		log.Fatalf("Failed to send email: %v", err)
+		LogError("Failed to send email", err)
 	}
 
 	return err
